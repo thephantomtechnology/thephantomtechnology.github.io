@@ -1,36 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Offensive Security</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background-color: #000;
-            color: #0f0;
             margin: 0;
             padding: 0;
-            animation: blink 2s infinite;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
         h1, h2, h3 {
-            border-bottom: 2px solid #0f0;
-            padding-bottom: 10px;
-            font-weight: 700; /* Use bold weight for headings */
-        }
-        hr {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 255, 0, 0), rgba(0, 255, 0, 0.75), rgba(0, 255, 0, 0));
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #0f0;
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards;
+            color: #ff0000;
+            font-weight: 700;
         }
         p {
             line-height: 1.6;
+            color: #fff;
         }
         a {
             color: #0ff;
@@ -39,54 +34,71 @@
         a:hover {
             text-decoration: underline;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
         .footer {
             text-align: center;
             padding: 20px 0;
             border-top: 2px solid #0f0;
         }
-        @keyframes blink {
-            0%, 100% { color: #0f0; }
-            50% { color: #000; }
+        .snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .snow span {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            background: rgba(0, 255, 0, 0.8);
+            animation: snowFall 10s linear infinite;
+        }
+        @keyframes snowFall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-1000px); }
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            color: #ff0000;
+        }
+        .card p {
+            color: #fff;
         }
     </style>
 </head>
 <body>
+    <div class="snow"></div>
     <div class="container">
-        <h1>Real Offensive Security</h1>
-        <p>Company Focused on Advanced Penetration Testing</p>
+        <h1>REAL OFFENSIVE SECURITY</h1>
+        <p>COMPANY FOCUSED ON ADVANCED PENETRATION TESTING</p>
         <p>Work with the best team</p>
-        <p>Working around the world for increase the Security</p>
-        <img src="https://github.com/user-attachments/assets/24301fbe-f48b-46c3-8214-8127f8a4a938" alt="hacker">
+        <p>WORKING AROUND THE WORLD FOR INCREASE THE SECURITY</p>
 
-        <h2>WebSite Security</h2>
-        <p>Measure the Website Security with advanced tests</p>
-        <hr>
-        <p>IMPROVE YOUR SECURITY</p>
-        <hr>
-        <img src="https://github.com/user-attachments/assets/d1dd7cc1-4960-4f7b-9275-125e8f53f385" alt="WebSite Security">
+        <div class="card">
+            <h2>WEBSITE SECURITY</h2>
+            <p>Measure the Website Security with advanced tests</p>
+            <a href="#">IMPROVE YOUR SECURITY</a>
+        </div>
 
-        <h2>Industrial Control System</h2>
-        <p>Expertise in Advanced ICS Security Testings</p>
-        <hr>
-        <p>PROTECT YOUR INDUSTRY</p>
-        <hr>
-        <img src="https://github.com/user-attachments/assets/cd5e31d5-3bfa-42b3-bcf7-ce69fbef3b4e" alt="Industrial Control System">
+        <div class="card">
+            <h2>INDUSTRIAL CONTROL SYSTEM</h2>
+            <p>Expertise in Advanced ICS Security Testings</p>
+            <a href="#">PROTECT YOUR INDUSTRY</a>
+        </div>
 
-        <h2>General Pestenting</h2>
-        <p>All types of Penetration Testing in all systems</p>
-        <hr>
-        <p>SECURE YOUR ORGANIZATION</p>
-        <hr>
-        <img src="https://github.com/user-attachments/assets/017dfd99-d355-439e-93a5-8ebfe4c7f34d" alt="General Pestenting">
+        <div class="card">
+            <h2>GENERAL PESTENTING</h2>
+            <p>All types of Penetration Testing in all systems</p>
+            <a href="#">SECURE YOUR ORGANIZATION</a>
+        </div>
 
         <hr>
         <h2>About US</h2>
@@ -108,5 +120,17 @@
     <div class="footer">
         <p>Los Angeles - CA, USA | Copyright © 2025 The Phantom Technology - Advanced Pentest</p>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const snowContainer = document.querySelector('.snow');
+            for (let i = 0; i < 100; i++) {
+                const snowFlake = document.createElement('span');
+                snowFlake.style.left = `${Math.random() * 100}vw`;
+                snowFlake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                snowFlake.style.animationDelay = `${Math.random() * 5}s`;
+                snowContainer.appendChild(snowFlake);
+            }
+        });
+    </script>
 </body>
 </html>
