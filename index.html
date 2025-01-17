@@ -72,16 +72,39 @@
             }
         }
         .card {
+            position: relative;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
+            overflow: hidden;
         }
         .card h2 {
             color: #ff0000;
         }
         .card p {
             color: #fff;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        .card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            z-index: 2;
         }
     </style>
 </head>
@@ -94,21 +117,30 @@
         <p>WORKING AROUND THE WORLD FOR INCREASE THE SECURITY</p>
 
         <div class="card">
-            <h2>WEBSITE SECURITY</h2>
-            <p>Measure the Website Security with advanced tests</p>
-            <a href="#">IMPROVE YOUR SECURITY</a>
+            <div class="overlay">
+                <h2>WEBSITE SECURITY</h2>
+                <p>Measure the Website Security with advanced tests</p>
+                <a href="#">IMPROVE YOUR SECURITY</a>
+            </div>
+            <img src="https://via.placeholder.com/800x400" alt="Website Security">
         </div>
 
         <div class="card">
-            <h2>INDUSTRIAL CONTROL SYSTEM</h2>
-            <p>Expertise in Advanced ICS Security Testings</p>
-            <a href="#">PROTECT YOUR INDUSTRY</a>
+            <div class="overlay">
+                <h2>INDUSTRIAL CONTROL SYSTEM</h2>
+                <p>Expertise in Advanced ICS Security Testings</p>
+                <a href="#">PROTECT YOUR INDUSTRY</a>
+            </div>
+            <img src="https://via.placeholder.com/800x400" alt="Industrial Control System">
         </div>
 
         <div class="card">
-            <h2>GENERAL PESTENTING</h2>
-            <p>All types of Penetration Testing in all systems</p>
-            <a href="#">SECURE YOUR ORGANIZATION</a>
+            <div class="overlay">
+                <h2>GENERAL PESTENTING</h2>
+                <p>All types of Penetration Testing in all systems</p>
+                <a href="#">SECURE YOUR ORGANIZATION</a>
+            </div>
+            <img src="https://via.placeholder.com/800x400" alt="General Penetration Testing">
         </div>
 
         <hr>
@@ -145,4 +177,3 @@
     </script>
 </body>
 </html>
-
