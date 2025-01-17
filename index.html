@@ -12,8 +12,8 @@
             padding: 0;
             background-color: #000;
             color: #fff;
-            overflow: hidden;
             position: relative;
+            overflow-y: scroll; /* 允许垂直滚动 */
         }
         .container {
             max-width: 800px;
@@ -45,12 +45,13 @@
             z-index: 1;
         }
         .snow {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
+            z-index: 0; /* 确保雪花在内容下方 */
         }
         .snow span {
             display: block;
@@ -122,7 +123,7 @@
                 <p>Measure the Website Security with advanced tests</p>
                 <a href="#">IMPROVE YOUR SECURITY</a>
             </div>
-            <img src="https://via.placeholder.com/800x400" alt="Website Security">
+            <img src="https://github.com/user-attachments/assets/d1dd7cc1-4960-4f7b-9275-125e8f53f385" alt="Website Security">
         </div>
 
         <div class="card">
@@ -131,7 +132,7 @@
                 <p>Expertise in Advanced ICS Security Testings</p>
                 <a href="#">PROTECT YOUR INDUSTRY</a>
             </div>
-            <img src="https://via.placeholder.com/800x400" alt="Industrial Control System">
+            <img src="https://github.com/user-attachments/assets/cd5e31d5-3bfa-42b3-bcf7-ce69fbef3b4e" alt="Industrial Control System">
         </div>
 
         <div class="card">
@@ -140,7 +141,7 @@
                 <p>All types of Penetration Testing in all systems</p>
                 <a href="#">SECURE YOUR ORGANIZATION</a>
             </div>
-            <img src="https://via.placeholder.com/800x400" alt="General Penetration Testing">
+            <img src="https://github.com/user-attachments/assets/017dfd99-d355-439e-93a5-8ebfe4c7f34d" alt="General Penetration Testing">
         </div>
 
         <hr>
