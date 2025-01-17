@@ -13,11 +13,14 @@
             background-color: #000;
             color: #fff;
             overflow: hidden;
+            position: relative;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            z-index: 1;
+            position: relative;
         }
         h1, h2, h3 {
             color: #ff0000;
@@ -38,27 +41,35 @@
             text-align: center;
             padding: 20px 0;
             border-top: 2px solid #0f0;
+            position: relative;
+            z-index: 1;
         }
         .snow {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            pointer-events: none;
         }
         .snow span {
             display: block;
             position: absolute;
-            bottom: 0;
             width: 10px;
             height: 10px;
             background: rgba(0, 255, 0, 0.8);
+            border-radius: 50%;
             animation: snowFall 10s linear infinite;
         }
         @keyframes snowFall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-1000px); }
+            0% {
+                transform: translate(0, 0) scale(0.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(0, 1000px) scale(1);
+                opacity: 0;
+            }
         }
         .card {
             background-color: rgba(255, 255, 255, 0.1);
@@ -134,3 +145,4 @@
     </script>
 </body>
 </html>
+
