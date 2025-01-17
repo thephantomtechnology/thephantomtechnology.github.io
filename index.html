@@ -4,11 +4,12 @@
     <title>Real Offensive Security</title>
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
             background-color: #000;
             color: #0f0;
             margin: 0;
             padding: 0;
+            animation: blink 2s infinite;
         }
         h1, h2, h3 {
             border-bottom: 2px solid #0f0;
@@ -23,6 +24,8 @@
             max-width: 100%;
             height: auto;
             border: 2px solid #0f0;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
         }
         p {
             line-height: 1.6;
@@ -43,6 +46,14 @@
             text-align: center;
             padding: 20px 0;
             border-top: 2px solid #0f0;
+        }
+        @keyframes blink {
+            0%, 100% { color: #0f0; }
+            50% { color: #000; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -97,3 +108,4 @@
     </div>
 </body>
 </html>
+
